@@ -1,0 +1,60 @@
+<html>
+    <style>
+            .container {
+                font-size: 12px;
+                width: 100%;
+            }
+            .forms {
+                width: 75%;
+                margin:0px auto;
+                background-color:orange;
+                padding:10px;
+            }
+            a::after {
+                content:'site';
+            }
+            .content {
+                width:100%;
+                height:100px;
+                margin:10px 0px;
+                text-align:center;
+            }
+
+            .content-a {background-color: red}
+            .content-b {background-color:yellow}
+            .content-c {background-color: green}
+            .content-d {background-color: black}
+            .content-e {background-color: blue}
+
+            @media (max-width:500px) {
+                .forms {
+                    background-color:gray;
+                }
+            }
+
+            @media (min-width:500px) {
+                .content {
+                    width:15%;
+                    display: inline-block;
+                    margin:0px 10px;
+                }
+            }
+            /*
+                min-width
+                max-width
+                orientation
+            */
+
+    </style>
+    <body>
+        <div class="container">
+            <div class="forms">
+                <div class="content content-a">content-a</div>
+                <div class="content content-b">content-b</div>
+                <div class="content content-c">content-c</div>
+                <div class="content content-d">content-d</div>
+                <div class="content content-e">content-e</div>
+            </div>
+        </div>
+    </body>
+</html>

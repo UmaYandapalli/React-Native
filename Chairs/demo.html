@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+            .chair {
+                height: 100px;
+                width:100px;
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr><td id="00" class="chair"></td><td id="01" class="chair"></td><td id="02" class="chair"></td></tr>
+            <tr><td id="10" class="chair"></td><td id="11" class="chair"></td><td id="12" class="chair"></td></tr>
+            <tr><td id="20" class="chair"></td><td id="21" class="chair"></td><td id="22" class="chair"></td></tr>
+        </table>
+        <div id="result" class="result"></div>
+
+        <script>
+            var ChairsList = {};
+            var row = 0, col=0;
+
+            ChairsList.selections = [];
+            for (i=0; i < 9; i++) {
+                var obj = {};
+                obj.id = '' + row + col;
+                col++;
+
+                if (col >2)
+                {
+                    row++;
+                    col =0;
+                }
+                obj.available = true;
+                obj.selected = !obj.available;
+
+                ChairsList[obj.id] = obj;
+
+            } 
+
+            var chairs = document.getElementsByClassName('chair');
+            var len = chairs.length;
+
+            for (j=0; j<len; j++ ) {
+                chairs[j].addEventListener('click', function() {
+                    var id = this.getAttribute("id");
+                    var chair = ChairsList[id];
+
+                    if(chair.available) {
+                        chair.available = false;
+                        chair.selected = !chair.available;
+                        this.style.backgroundColor = 'grey';
+                        ChairsList.selections.push(id);
+                    }
+
+                    print();
+                });
+
+            }
+
+            function print() {
+                document.getElementById('result').innerHTML = ChairsList.selections;
+            }
+            // document.getElementsByClassName('chair').addEventListener('click', function() {
+            //     var id = this.getAttribute("id");
+            //     var chair = ChairsList[id];
+
+            //     if(chair.available) {
+            //         chair.available = false;
+            //         chair.selected = !chair.available;
+            //         this.style.backgroundColor = grey;
+            //     }
+            // });
+        </script>
+    </body>
+</html>

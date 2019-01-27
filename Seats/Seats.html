@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>
+            Seats
+        </title>
+        <link rel="stylesheet" href="Seats.css">
+    </head>
+    <body>
+        <table>
+            <tbody >
+                <form id="frm1">
+                <tr>
+                    <td ><div name="abc" onclick="selected(this)"/></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </form>            
+           </tbody>
+        </table>
+        <div>No. of seats selected:<div id="demo"></div></div>
+
+        <script type="text/javascript">
+            
+            var a=[[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]];
+            a[0][0]=1;
+            var r=document.forms["frm1"];
+            function selected(form)
+            {
+                alert("hi")
+                var count;
+                for(i=0;i<=28;i++)
+                {
+                    count=count+1;
+
+                }
+                document.getElementsByName("abc").disabled = true;
+                //form.abc.disabled = true; 
+                return true;
+                document.getElementById("demo").innerHTML = count;
+            }
+
+            
+        
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+
+
+
+body
+{
+   padding: 20px;
+   border: 1px solid black;
+}
+p{
+    padding-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.cls{
+    border: 3px solid #4CAF50;
+    margin-bottom:20px;
+}
+img {
+    float: left;
+    width: 150px;
+    height: 150px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-right:50px;
+}
+.clearfix {
+    overflow: auto;
+}
+.title
+{
+   font-weight: bold;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-right: 10px;
+}
+.desc
+{
+    padding-bottom: 10px;
+    padding-right:10px;
+}
+
+@media(max-width:350px)
+{
+     .desc
+     {
+         display: none;
+     }
+     .title{
+         display: inline-block;
+     }
+}

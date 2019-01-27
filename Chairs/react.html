@@ -1,0 +1,54 @@
+<html>
+<head>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+</head>
+<body>
+	<div id="root"></div>
+    <script type="text/babel">
+        class Login extends React.Component
+         {
+			render() {
+
+             return <div>
+                  <h1>{this.props.title}</h1>
+                 <input type="button"/><input type="button"/><input type="button"/><input type="button"/><input type="button"/><br/>
+                 <input type="button"/><input type="button"/><input type="button"/><input type="button"/><input type="button"/><br/>
+             </div>
+            }
+         }
+
+         ReactDOM.render(<Login title="list of buttons"/>, document.getElementById('root'));
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- //         var table=" ";
+        //     var rows=5;
+        //     var cols=5;
+        //     for(var i=0;i<rows;i++)
+        //     {
+        //         for(var j=1;j<=cols;j++)
+        //         {
+        //             table +='<button>'+'</button>';
+        //         }
+        //         table += '</br>';
+        //     }
+        //     document.write('<form id="myTable">'+table+'</form>');
+        // }
+        // ReactDOM.render(<Login title="Welcome to Login" />, document.getElementById('root')); -->

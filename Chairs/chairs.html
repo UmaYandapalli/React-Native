@@ -1,0 +1,58 @@
+<html>
+    <body>
+           
+           
+        <style>
+            td{
+                border: 2px solid black;
+                height:20px;
+                width:20px;
+                background-color: palevioletred;
+            }
+
+            table
+            {
+                margin:auto;
+            }
+          
+        </style>
+        <script>
+            var table=" ";
+            var rows=5;
+            var cols=5;
+            for(var i=0;i<rows;i++)
+            {
+                table +='<tr>';
+                for(var j=1;j<=cols;j++)
+                {
+                    table += '<td id="txtValue" onclick="AddClick()">'+'</td>'
+                }
+                table += '</tr>';
+            }
+            document.write('<table id="myTable">'+table+'</table>');
+
+            var list = [];
+            function AddClick()
+            {
+               var x = list.length;
+               list[x] = document.getElementById("txtValue");
+              
+               res();
+            }
+
+            function res()
+            {
+               var n = list.length;
+               
+               document.getElementById("demo").innerHTML = "No. of seats selected:" + n ;
+               
+               
+            }
+
+           
+         
+
+        </script>
+         <p id="demo"></p> 
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<title>Temperature</title>
+<body>
+<div>
+    <div><label>Enter a Value:</label> <input type="text" id="tf1"></div>
+    
+    <div>
+            Convert To: <select id="degree">
+                    <option name="sel">Celsius</option>
+                    <option name="sel">Fahrenheit</option>
+            </select>
+    </div>
+    
+    <button onclick="converter()">Convert!</button>
+    <div id="result"></div>
+</div>
+
+<script>
+
+function converter()
+{
+    var val = document.getElementById("tf1").value;
+    if(document.getElementById("degree").selectedIndex == "0" )
+    {
+         cel= (5/9)*(val-32);
+         document.getElementById("result").innerHTML =  "Celsius is " +cel;
+    }
+    else if(document.getElementById("degree").selectedIndex == "1" )
+    {
+        far=val*(9/5)+32;
+        document.getElementById("result").innerHTML = " Farenheit is " + far ;
+    }
+}
+
+</script>
+</body>
+</html>
